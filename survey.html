@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body> 
+   <div id="pop">
    <form>
    <h4>What is your Name?</h4>
    <input type="text" id="name"><br>
@@ -114,6 +115,7 @@
     </select></div> -->
     <br>
     <button id="submit" action="/api/friends" method="post">SUBMIT</button>
+    </div>
 </body>
 <script>
 let arr = [];
@@ -142,20 +144,6 @@ function difScore (x,y) {
  return curDif;
 
 }
-//this function compares them and grabs the best match, it decrements
-//instead of increamenting 
-// function compScore (z,a) {
-//         for (j = a.length -1; j>= 0; j-- ){
-//              if   (difScore(z, a[j].scores) < bestScore){
-//                      bestScore = difScore(z, a[j]);
-//                      match = a[j];
-//                 };
-//         }
-//         return console.log(a[match])
-// }
-
-
-
 
 //Event Listener for Submit button
 target.addEventListener('click', function () {
@@ -182,12 +170,26 @@ fetch(`/api/friends`, {
       'Content-Type': 'application/json'
     }
   })
+  //for loop that compares best scores to find match
   for (j = 0; j < compArr.length; j++ ){
              if   (difScore(arr, compArr[j].scores) < bestScore){
                      bestScore = difScore(arr, compArr[j].scores);
                      match = compArr[j];
                 };
         }
+        //creating popup that appends over things
+       pop = document.getElementById("pop");
+       targetDiv = document.createElement('div');
+       targetDiv.setAttribute("id","popup");
+       targetDiv.setAttribute("style","z-index: 2; display: inline-block; width: 200px; margin: 5px")
+       targetDiv.innerHTML = match.name;
+       pop.appendChild(targetDiv);
+       image = document.createElement(`img`);
+       image.setAttribute("src", match.photo);
+       image.setAttribute("alt", "Your Matches Photo");
+       targetDiv.appendChild(image);
+       
+
         // return console.log(compArr[match])
         
 }
