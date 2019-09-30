@@ -1,0 +1,23 @@
+{
+  "name": "friends",
+  "version": "1.0.0",
+  "description": "Friends App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atocchi/friends.git"
+  },
+  "keywords": [
+    "Friends"
+  ],
+  "author": "Andrew Tocchi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atocchi/friends/issues"
+  },
+  "homepage": "https://github.com/atocchi/friends#readme"
+}
