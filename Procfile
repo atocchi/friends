@@ -1,3 +1,3 @@
 // Procfile
 
-web: node server.jsh
+web: node server.js
