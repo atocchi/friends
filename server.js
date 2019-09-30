@@ -3,7 +3,7 @@ const express = require ('express');
 const app = express();
 const path = require("path");
 //declare port
-const PORT = 3030
+const PORT = 5000
 
 
 //let express parse data
