@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Survey</title>
 </head>
 <body> 
    <div id="pop">
@@ -180,8 +181,8 @@ fetch(`/api/friends`, {
         //creating popup that appends over things
        pop = document.getElementById("pop");
        targetDiv = document.createElement('div');
-       targetDiv.setAttribute("id","popup");
-       targetDiv.setAttribute("style","z-index: 2; display: inline-block; width: 200px; margin: 5px")
+       targetDiv.setAttribute( "class ","modal fade");
+//        targetDiv.setAttribute("style","z-index: 2; display: inline-block; width: 200px; margin: 5px")
        targetDiv.innerHTML = match.name;
        pop.appendChild(targetDiv);
        image = document.createElement(`img`);
