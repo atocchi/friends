@@ -181,8 +181,8 @@ fetch(`/api/friends`, {
         //creating popup that appends over things
        pop = document.getElementById("pop");
        targetDiv = document.createElement('div');
-       targetDiv.setAttribute( "class ","modal fade");
-//        targetDiv.setAttribute("style","z-index: 2; display: inline-block; width: 200px; margin: 5px")
+       targetDiv.setAttribute( "id","popup");
+       targetDiv.setAttribute("style","z-index: 2; display: inline-block; width: 200px; margin: 5px")
        targetDiv.innerHTML = match.name;
        pop.appendChild(targetDiv);
        image = document.createElement(`img`);
