@@ -117,6 +117,16 @@
     <br>
     <button id="submit" action="/api/friends" method="post">SUBMIT</button>
     </div>
+
+
+
+
+
+
+
+
+
+    
 </body>
 <script>
 let arr = [];
@@ -183,10 +193,12 @@ fetch(`/api/friends`, {
        targetDiv = document.createElement('div');
        targetDiv.setAttribute( "id","popup");
        targetDiv.setAttribute("style","z-index: 2; display: inline-block; width: 200px; margin: 5px")
-       targetDiv.innerHTML = match.name;
+       targetDiv.innerHTML = `Your Match is: ${match.name}`;
        pop.appendChild(targetDiv);
        image = document.createElement(`img`);
        image.setAttribute("src", match.photo);
+       image.setAttribute("heigh", "200px");
+       image.setAttribute("width", "200px");
        image.setAttribute("alt", "Your Matches Photo");
        targetDiv.appendChild(image);
        
@@ -206,4 +218,30 @@ else{
 
 
 </script>
+<style>
+ 
+ 
+#popup {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  text-align: center;
+  font-size: 20px;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555;
+  background-color: azure;
+};
+
+#photo {
+        height:200px;
+        width: 200px;
+};
+
+
+
+
+
+</style>
 </html>
