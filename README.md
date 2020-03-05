@@ -1,5 +1,9 @@
 # friends
 
+
+![friend](friend.PNG)
+
+
 1) How To--- Run Locally
 Run NPM install to install both express and path,
 Run node server to start the local server 
